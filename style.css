@@ -1,0 +1,133 @@
+/* Основні налаштування для всього сайту */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Контейнер усього додатку */
+.app-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Стилі для екранів та клас приховування */
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.screen.hide {
+    display: none;
+}
+
+/* Заголовки */
+h2 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+/* Верхня панель (Таймер та Бали) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    color: #7f8c8d;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#timer {
+    color: #e74c3c; /* Червоний колір для таймера */
+}
+
+#score-display {
+    color: #27ae60; /* Зелений колір для балів */
+}
+
+/* Текст результату */
+#result-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* Загальні стилі для ВСІХ кнопок */
+button {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Кнопки керування (Почати, Спробувати ще) */
+#start-btn, #restart-btn {
+    background-color: #3498db;
+    color: white;
+    width: 100%;
+}
+
+#start-btn:hover, #restart-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Контейнер для варіантів відповідей */
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Кнопки варіантів відповідей */
+.answer-btn {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    text-align: left;
+    padding: 14px 20px;
+    border: 2px solid transparent;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background-color: #e2e7e9;
+    border-color: #bdc3c7;
+}
+
+/* Стан кнопок після натискання (правильно/неправильно) */
+.answer-btn.correct {
+    background-color: #2ecc71 !important;
+    color: white !important;
+    border-color: #27ae60;
+}
+
+.answer-btn.wrong {
+    background-color: #e74c3c !important;
+    color: white !important;
+    border-color: #c0392b;
+}
+
+/* Стиль для заблокованих кнопок (коли користувач вже обрав варіант) */
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
